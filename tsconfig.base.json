@@ -16,6 +16,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@hl8/source"]
+    "customConditions": ["@hl8/source"],
+    
   }
 }
