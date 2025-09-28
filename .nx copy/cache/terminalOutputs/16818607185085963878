@@ -1,6 +1,0 @@
-> nx run common:build
-
-Compiling TypeScript files for project "common"...
-Done compiling TypeScript files for project "common".
-
-[2m../../dist/packages/common/README.md[22m
