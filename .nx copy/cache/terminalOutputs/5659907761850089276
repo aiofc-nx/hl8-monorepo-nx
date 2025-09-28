@@ -1,0 +1,6 @@
+> nx run logger:build
+
+Compiling TypeScript files for project "logger"...
+Done compiling TypeScript files for project "logger".
+
+[2m../../dist/packages/logger/README.md[22m

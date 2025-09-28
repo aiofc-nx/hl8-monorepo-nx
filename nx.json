@@ -5,16 +5,15 @@
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/eslint.config.mjs",
+      "!{projectRoot}/eslint.config.cjs",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": ["{workspaceRoot}/.circleci/config.yml"]
+    "sharedGlobals": []
   },
-  "nxCloudId": "68d65acd96bf706ca2b86793",
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
@@ -44,8 +43,10 @@
     }
   ],
   "targetDefaults": {
-    "test": {
-      "dependsOn": ["^build"]
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   }
 }

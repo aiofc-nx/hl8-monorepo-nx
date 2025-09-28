@@ -1,22 +1,24 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "composite": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "importHelpers": true,
-    "isolatedModules": true,
-    "lib": ["es2022"],
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "noEmitOnError": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
+    "target": "ES2022",
+    "module": "commonjs",
+    "lib": ["es2020", "dom", "es2018", "esnext.array", "ES2022"],
     "skipLibCheck": true,
-    "strict": true,
-    "target": "es2022",
-    "customConditions": ["@hl8/source"],
-    
-  }
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@hl8/common": ["packages/common/src/index.ts"],
+      "@hl8/logger": ["packages/logger/src/index.ts"],
+      "@hl8/utils": ["packages/utils/src/index.ts"]
+    }
+  },
+  "exclude": ["coverage/**/*", "dist/**/*", "node_modules", "tmp"]
 }

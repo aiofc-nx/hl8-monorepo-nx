@@ -1,13 +1,14 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compileOnSave": false,
-  "files": [],
-  "references": [
-    {
-      "path": "./packages/logger"
-    },
-    {
-      "path": "./packages/config"
-    }
-  ]
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "resolveJsonModule": true,
+    "typeRoots": ["node_modules/@types"],
+    "preserveConstEnums": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": false,
+    "noImplicitAny": false,
+    "esModuleInterop": false,
+    "useDefineForClassFields": false
+  },
+  "extends": "./tsconfig.base.json"
 }

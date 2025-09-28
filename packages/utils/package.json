@@ -1,5 +1,5 @@
 {
-  "name": "@hl8/logger",
+  "name": "@hl8/utils",
   "version": "0.0.1",
   "private": true,
   "type": "commonjs",
